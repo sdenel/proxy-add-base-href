@@ -1,3 +1,5 @@
+**Warning: ugly bunch of lines, that works for my own usecase, with no warranty it will work in yours! Contributions welcomed, even as issues!**
+
 A small Python script, that aims to be used as a proxy between the client and a service that does not provide a <base href="..."> tag.
 
 # Usage wih Docker
