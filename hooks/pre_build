@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e
+
+#!/bin/bash
+echo "=> Building the binary"
+docker run --privileged \
+  -v $(pwd):/src \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -w /src \
+  python:3.6.6-alpine3.6 \
+  "./pre-build-image.sh"

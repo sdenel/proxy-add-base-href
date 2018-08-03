@@ -1,0 +1,10 @@
+sudo: required
+language: python
+service:
+- docker
+python:
+- '3.6'
+install:
+- pip3 install requests
+script: # TODO: add pep8 + test more!
+- python3 -m doctest -v proxy.py
