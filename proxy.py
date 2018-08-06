@@ -83,7 +83,7 @@ if __name__ == "__main__":
             data = self.rfile.read(int(self.headers['Content-Length']))
             headers = headers_to_dict(self.headers)
             target_response = requests.post(
-                TARGET_URL + self.path,
+                TARGET_URL + self.path.lstrip('/'),
                 headers=headers,
                 data=data
             )
@@ -92,7 +92,7 @@ if __name__ == "__main__":
         def do_GET(self):
             headers = headers_to_dict(self.headers)
             target_response = requests.get(
-                TARGET_URL + self.path,
+                TARGET_URL + self.path.lstrip('/'),
                 headers=headers
             )
             self.handle_response(target_response)
