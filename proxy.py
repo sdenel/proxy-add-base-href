@@ -45,7 +45,7 @@ def parse_html(html, base_href):
     p_head = html.find('<head')
     if p_head > -1:
         p_endtag = html.find('>', p_head)
-        html = html[:p_endtag + 1] + '<base href="' + base_href + '">' + html[p_endtag:]
+        html = html[:p_endtag + 1] + '<base href="' + base_href + '">' + html[p_endtag+1:]
         return html
 
 
